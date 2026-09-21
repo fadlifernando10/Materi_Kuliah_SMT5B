@@ -44,7 +44,7 @@ export default function App() {
  <View style={styles.section}>
         <Text style={styles.sectionTitle}>Rencana Menggapai Cita-cita</Text>
         <Text style={styles.paragraphText}>
-          Untuk mewujudkan cita-cita sebagai Full Stack Developer, saya akan fokus belajar secara bertahap, mulai dari keterampilan frontend (seperti HTML, CSS, JavaScript/TypeScript, dan React Native) hingga keterampilan backend dan database (seperti Node.js dan MySQL). Selain belajar teori, saya juga akan memperbanyak praktik dengan membuat proyek-proyek mandiri untuk membangun portofolio.
+          Untuk mewujudkan cita-cita sebagai Full Stack Developer, saya akan fokus belajar secara bertahap, mulai dari keterampilan frontend seperti HTML, CSS, JavaScript hingga keterampilan backend dan database (seperti Node.js dan MySQL).
         </Text>
       </View>
 
