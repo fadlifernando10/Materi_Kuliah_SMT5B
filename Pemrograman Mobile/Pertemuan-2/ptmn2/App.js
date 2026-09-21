@@ -1,73 +1,73 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 
 export default function App() {
+  const steps = [
+    'Menguasai HTML, CSS, dan JavaScript/TypeScript',
+    'Mempelajari framework Frontend (React / React Native)',
+    'Memahami Backend & Database (Node.js, Express, MySQL/MongoDB)',
+    'Membangun proyek Full Stack portofolio secara mandiri',
+    'Pelajari Git & CI/CD untuk kolaborasi kode',
+  ];
+
   return (
-    <View style={styles.container}>
-      <View style={styles.card}>
-        <Image
-          source={{ uri: 'https://via.placeholder.com/120' }}
-          style={styles.avatar}
-        />
+    <ScrollView contentContainerStyle={styles.container}>
+      {/* Header Profile */}
+      <Image
+        source={{ uri: 'https://via.placeholder.com/120' }}
+        style={styles.avatar}
+      />
+      <Text style={styles.name}>Fadli Fernando</Text>
+     
 
-        {/* Nama & Role */}
-        <Text style={styles.name}>Fadli Fernando</Text>
-        <Text style={styles.role}>Aspiring Full Stack Developer</Text>
+      <View style={styles.divider} />
 
-        <View style={styles.divider} />
-
-        {/* Detail Informasi */}
-        <View style={styles.infoContainer}>
-          <View style={styles.infoRow}>
-            <Text style={styles.label}>NIM</Text>
-            <Text style={styles.value}>2488010043</Text>
-          </View>
-
-          <View style={styles.infoRow}>
-            <Text style={styles.label}>Alamat</Text>
-            <Text style={styles.value}>Cirebon</Text>
-          </View>
-
-          <View style={styles.infoRow}>
-            <Text style={styles.label}>Cita-cita</Text>
-            <Text style={styles.value}>Full Stack Developer</Text>
-          </View>
+      {/* Detail Informasi */}
+      <View style={styles.section}>
+        <View style={styles.infoRow}>
+          <Text style={styles.label}>NIM</Text>
+          <Text style={styles.value}>2488010043</Text>
+        </View>
+        <View style={styles.infoRow}>
+          <Text style={styles.label}>Alamat</Text>
+          <Text style={styles.value}>Cirebon</Text>
+        </View>
+        <View style={styles.infoRow}>
+          <Text style={styles.label}>Cita-cita</Text>
+          <Text style={styles.value}>Full Stack Developer</Text>
         </View>
       </View>
+
+      <View style={styles.divider} />
+
+      {/* Langkah Menggapai Cita-cita */}
+ <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Rencana Menggapai Cita-cita</Text>
+        <Text style={styles.paragraphText}>
+          Untuk mewujudkan cita-cita sebagai Full Stack Developer, saya akan fokus belajar secara bertahap, mulai dari keterampilan frontend (seperti HTML, CSS, JavaScript/TypeScript, dan React Native) hingga keterampilan backend dan database (seperti Node.js dan MySQL). Selain belajar teori, saya juga akan memperbanyak praktik dengan membuat proyek-proyek mandiri untuk membangun portofolio.
+        </Text>
+      </View>
+
       <StatusBar style="dark" />
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#f4f6f9',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-  },
-  card: {
+    flexGrow: 1,
     backgroundColor: '#ffffff',
-    width: '100%',
-    maxWidth: 360,
-    borderRadius: 16,
-    padding: 24,
+    paddingHorizontal: 24,
+    paddingTop: 60,
+    paddingBottom: 40,
     alignItems: 'center',
-    // Shadow untuk iOS
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 10,
-    // Elevation untuk Android
-    elevation: 5,
   },
   avatar: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
+    width: 90,
+    height: 90,
+    borderRadius: 45,
     backgroundColor: '#e1e4e8',
-    marginBottom: 16,
+    marginBottom: 12,
   },
   name: {
     fontSize: 22,
@@ -78,30 +78,41 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#007AFF',
     fontWeight: '600',
-    marginTop: 4,
+    marginTop: 2,
   },
   divider: {
     height: 1,
     width: '100%',
-    backgroundColor: '#eef0f2',
+    backgroundColor: '#f0f0f0',
     marginVertical: 20,
   },
-  infoContainer: {
+  section: {
     width: '100%',
   },
   infoRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginVertical: 8,
+    marginVertical: 6,
   },
   label: {
     fontSize: 14,
     color: '#6c757d',
-    fontWeight: '500',
   },
   value: {
     fontSize: 14,
     color: '#212529',
     fontWeight: '600',
+  },
+  sectionTitle: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: '#1a1a1a',
+    marginBottom: 8,
+  },
+  paragraphText: {
+    fontSize: 14,
+    color: '#495057',
+    lineHeight: 22,
+    textAlign: 'justify',
   },
 });
