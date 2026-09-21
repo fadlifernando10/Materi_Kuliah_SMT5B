@@ -34,4 +34,4 @@ Mahasiswa mampu:
  - setelah itu bisa berhentikan dengan (CTRL + C)
  - install (npx expo install react-dom react-native-web)
  - npx expo start --web
- ![alt text](image-4.png)
+ ![alt text](image-5.png)
