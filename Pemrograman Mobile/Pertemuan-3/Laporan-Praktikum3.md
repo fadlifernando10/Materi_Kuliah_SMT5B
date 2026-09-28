@@ -43,5 +43,5 @@
 ## Langkah 11: StyleSheet (Styling Terpusat)
 
 
-27. konfirmasi hasil
+## konfirmasi hasil
 ![alt text](<Pemrograman Mobile_Pertemuan-3_hasil.gif>)
