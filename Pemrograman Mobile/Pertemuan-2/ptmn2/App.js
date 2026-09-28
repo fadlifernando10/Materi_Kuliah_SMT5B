@@ -29,7 +29,7 @@ const PROFILE = {
   email: 'fadlifernando40@gmail.com',
   phone: '+62 812-3456-7890',
   location: 'Cirebon, Indonesia',  
-  bio: 'Memiliki semangat tinggi dalam mengembangkan aplikasi seluler dan mengeksplorasi teknologi baru. Memiliki pengalaman sebagai Full Stack Developer dan selalu antusias untuk terus belajar serta mengembangkan kemampuan di bidang teknologi.',
+  bio: 'Memiliki semangat tinggi dalam mengembangkan aplikasi seluler dan mengeksplorasi teknologi baru.',
   avatar: '../assets/aing.jpeg',
   avatarOffline: '../assets/aing.jpeg',
 };

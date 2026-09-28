@@ -44,4 +44,4 @@
 
 
 ## konfirmasi hasil
-![alt text](<Pemrograman Mobile_Pertemuan-3_hasil.gif>)
+![alt text](hasil.gif)
