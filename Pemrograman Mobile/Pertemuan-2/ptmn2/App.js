@@ -218,9 +218,6 @@ export default function App() {
     <Image
       source={require('./assets/aing.jpeg')}
       style={styles.avatar}
-      // resizeMode menentukan cara gambar menyesuaikan ukuran
-      // 'cover' = memenuhi area (mungkin terpotong)
-      // 'contain' = semua terlihat (mungkin ada ruang kosong)
     />
 
     {/* Conditional rendering: badge hanya tampil jika openToWork = true */}
@@ -286,12 +283,12 @@ export default function App() {
 
   {/* 5. FlatList → daftar skill */}
   <FlatList
-    data={SKILLS}                                      // array data
-    keyExtractor={(item) => item.id}                  // key unik tiap item
-    renderItem={({ item }) => <SkillCard item={item} />} // render tiap item
-    scrollEnabled={false}                             // scroll dihandle ScrollView
+    data={SKILLS}                                      
+    keyExtractor={(item) => item.id}                  
+    renderItem={({ item }) => <SkillCard item={item} />}
+    scrollEnabled={false}                             
     ItemSeparatorComponent={() => (
-      <View style={{ height: 8 }} />                  // komponen pemisah antar item
+      <View style={{ height: 8 }} />                  
     )}
   />
 </View>
@@ -304,7 +301,7 @@ export default function App() {
 
   {/* 6. SectionList → pengalaman & pendidikan */}
   <SectionList
-    sections={SECTIONS} // array of { title, data[] }
+    sections={SECTIONS}
     keyExtractor={(item) => item.id}
     renderItem={({ item }) => (
       // TimelineCard punya onPress untuk membuka Modal
@@ -333,22 +330,22 @@ export default function App() {
     style={styles.textInput}
     placeholder="Nama Anda"
     placeholderTextColor="#888"
-    value={senderName} // nilai terkontrol dari state
-    onChangeText={setSenderName} // update state setiap ketik
-    returnKeyType="next" // label tombol keyboard
-    editable={!sending} // nonaktif saat loading
+    value={senderName} 
+    onChangeText={setSenderName} 
+    returnKeyType="next" 
+    editable={!sending} 
   />
 
   {/* 7. TextInput → input pesan (multiline = seperti textarea) */}
   <TextInput
-    style={[styles.textInput, styles.textArea]} // gabungkan 2 style
+    style={[styles.textInput, styles.textArea]}
     placeholder="Tulis pesan Anda di sini..."
     placeholderTextColor="#888"
     value={message}
     onChangeText={setMessage}
-    multiline // aktifkan multiline
-    numberOfLines={4} // tinggi awal 4 baris
-    textAlignVertical="top" // teks mulai dari atas (Android)
+    multiline 
+    numberOfLines={4} 
+    textAlignVertical="top" 
     editable={!sending}
   />
 
@@ -370,10 +367,10 @@ export default function App() {
 </View>
 
 <Modal
-  visible={modalVisible} // tampilkan jika true
-  animationType="slide" // animasi: 'slide', 'fade', 'none'
-  transparent // background transparan (overlay)
-  onRequestClose={() => setModalVisible(false)} // tombol back Android
+  visible={modalVisible}
+  animationType="slide"
+  transparent 
+  onRequestClose={() => setModalVisible(false)} 
 >
   {/* Overlay gelap di belakang dialog */}
   <View style={styles.modalOverlay}>
@@ -435,16 +432,16 @@ export default function App() {
 }
 
 const COLORS = {
-  bg: '#0f0f1a',          // latar belakang
-  card: '#1a1a2e',        // kartu/panel
-  cardBorder: '#2d2d44',  // border kartu
-  accent: '#7c3aed',      // ungu utama
-  accentLight: '#a78bfa', // ungu muda
-  accentGold: '#f59e0b',  // emas
-  text: '#f0f0f0',        // teks utama
-  textMuted: '#9ca3af',   // teks redup
-  textDim: '#6b7280',     // teks sangat redup
-  success: '#4ade80',     // hijau
+  bg: '#0f0f1a',         
+  card: '#1a1a2e',       
+  cardBorder: '#2d2d44', 
+  accent: '#7c3aed',     
+  accentLight: '#a78bfa', 
+  accentGold: '#f59e0b',  
+  text: '#f0f0f0',        
+  textMuted: '#9ca3af',   
+  textDim: '#6b7280',     
+  success: '#4ade80',     
   white: '#ffffff',
 };
 
@@ -453,7 +450,7 @@ const styles = StyleSheet.create({
 
   // ── LAYOUT DASAR ──────────────────────────────────────────────
   safeArea: {
-    flex: 1,                         // isi penuh layar
+    flex: 1,                         
     backgroundColor: COLORS.bg,
   },
   scroll: {
@@ -464,13 +461,13 @@ const styles = StyleSheet.create({
   backgroundColor: '#1a1a2e',
   paddingHorizontal: 20,
   paddingVertical: 14,
-  flexDirection: 'row',              // anak tersusun
-  justifyContent: 'space-between',   // ujung kiri & kanan
-  alignItems: 'center',              // rata tengah vertikal
+  flexDirection: 'row',              
+  justifyContent: 'space-between',   
+  alignItems: 'center',              
   borderBottomWidth: 1,
   borderBottomColor: COLORS.cardBorder,
-  elevation: 4,                      // bayangan (Android)
-  shadowColor: '#000',               // bayangan (iOS)
+  elevation: 4,                      
+  shadowColor: '#000',               
   shadowOpacity: 0.3,
   shadowOffset: { width: 0, height: 2 },
   shadowRadius: 4,
