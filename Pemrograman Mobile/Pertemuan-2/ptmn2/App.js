@@ -67,7 +67,7 @@ const SECTIONS = [
 
 const SOCIAL = [
   { id: 's1', label: 'LinkedIn', icon: 'linkedin', url: 'https://www.linkedin.com/in/fadlifernando/' },
-  { id: 's2', label: 'GitHub', icon: 'github', url: 'https://github.com/fadlifernando' },
+  { id: 's2', label: 'GitHub', icon: 'github', url: 'https://github.com/fadlifernando10' },
   { id: 's3', label: 'Twitter', icon: 'twitter', url: 'https://twitter.com/fadlifernando' },
 ];
 
@@ -321,9 +321,9 @@ export default function App() {
 
 <View style={styles.sectionBox}>
   <Text style={styles.sectionTitle}>✉️ Hubungi Saya</Text>
-  <Text style={styles.sectionSubtitle}>
+  {/* <Text style={styles.sectionSubtitle}>
     ↳ TextInput, Button, ActivityIndicator
-  </Text>
+  </Text> */}
 
   {/* 7. TextInput → input nama (single line) */}
   <TextInput
