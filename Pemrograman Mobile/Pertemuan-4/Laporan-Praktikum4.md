@@ -2,8 +2,8 @@
 
 ## Tujuan Pembelajaran
 mahasiswa mampu : 
-1. merancsng dan menerapkan navigasi antar layar pada aplikasi react native
-2. menggunakan ;library react native navigation ( stack, tab, drawer navigation )
+1. merancang dan menerapkan navigasi antar layar pada aplikasi react native
+2. menggunakan library react native navigation ( stack, tab, drawer navigation )
 
 ## alur praktikum
 
